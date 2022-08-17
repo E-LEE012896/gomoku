@@ -1,0 +1,113 @@
+* {
+  margin: auto;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+.container {
+  display: grid;
+  text-align: center;
+
+  grid-template-columns: 200px 200px 300px;
+  grid-template-areas:
+    "message message button"
+    "canvas canvas canvas";
+}
+
+canvas {
+  grid-area: canvas;
+  position: absolute;
+  border: 5px solid black;
+  margin-left: 1vw;
+  top: 5vh;
+  z-index: 1;
+}
+
+.message {
+  grid-area: message;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.buttons {
+  grid-area: button;
+  height: 30px;
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "withdraw restart";
+}
+
+#withdraw {
+  grid-area: withdraw;
+  top: 0px;
+  left: 20px;
+  width: 90px;
+  font: 18px bold;
+}
+
+#reload {
+  grid-area: restart;
+  top: 0px;
+  left: 150px;
+  width: 90px;
+  font: 18px bold;
+  text-align: justify;
+}
+
+.trophy {
+  width: 600px;
+  height: 600px;
+}
+
+.winShow1 {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  left: 30px;
+  top: 60px;
+  width: 630px;
+  height: 570px;
+  background-color: white;
+  text-align: center;
+  padding-top: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 70px;
+  font-weight: bolder;
+
+  animation-name: blink;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.winShow2 {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  left: 30px;
+  top: 60px;
+  width: 630px;
+  height: 570px;
+  background-color: black;
+  text-align: center;
+  padding-top: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 70px;
+  color: white;
+  font-weight: bolder;
+
+  animation-name: blink;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
